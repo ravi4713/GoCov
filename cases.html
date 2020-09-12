@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<body lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GoCov</title>
+    <link rel="stylesheet" href="./CSS/style.css">
+    <link rel="icon" href="./Assets/ezgif.com-webp-to-png.png">
+    <link rel="apple-touch-icon" href="./Assets/ezgif.com-webp-to-png.png">
+</head>
+<body>
+    <div class="container1" ng-app="MyApp" ng-controller="MyCtrl">
+        <header>
+            <nav>
+                <a href="index.html">
+                    <img src="./Assets/Component 1 – 1.png" class="logo-top">
+                </a>
+            </nav>
+        </header>
+        <div class="boxes">
+            <div class="box1">
+                <h2>Confirmed Cases</h2>
+                <br/>
+                <h1 class="number">{{all_data.Global.TotalConfirmed}}</h1>
+            </div>
+            <div class="box2">
+                <h2>Total Recovered</h2>
+                <br/>
+
+                <h1 class="number">{{all_data.Global.TotalRecovered}}</h1>
+            </div>
+            <div class="box3">
+                <h2>Total Deaths</h2>
+                <br/>
+                <h1 class="number">{{all_data.Global.TotalDeaths}}</h1>
+            </div>
+        </div>
+        <div class="search-box">
+            <!-- {{title}} -->
+            <input type="text" name="search" placeholder="Search Country" class="search" ng-model="countryName">
+        </div>
+        <div class="result">
+            <div class="card">
+                <div>
+                    Country
+                </div>
+                <div>
+                    total-confirmed
+                </div>
+                <div>
+                    total-death
+                </div>
+                <div>
+                    total-recovered
+                </div>  
+            </div>
+            <div class="card" ng-repeat="country in countries | filter:countryName">
+                <div>
+                    {{country.Country}}
+                </div>
+                <div>
+                    {{country.TotalConfirmed}}
+                </div>
+                <div>
+                    {{country.TotalDeaths}}
+                </div>
+                <div>
+                    {{country.TotalRecovered}}
+                </div>  
+            </div>
+            
+        </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.0/angular.min.js"></script>
+    <script src="JS/script.js"></script>
+</body>
+</html>
