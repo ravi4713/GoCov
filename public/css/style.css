@@ -184,3 +184,26 @@ a{
       padding: 30px;
       padding-bottom: 0;
   }
+  .headn{
+    border: 2px solid rgb(161, 12, 32);
+    height:50px;
+    margin: 5px 0px;
+}
+.des{
+    font-size: 125%;
+    color: white;
+    margin-top:10px ;
+}
+.by{
+    font-weight: bold;
+    font-size: 150%;
+    color :rgb(78, 78, 150);
+    margin-left: 5px;
+}
+.more{
+    display: none;
+    border: 2px solid green;
+    margin-top: 3px;
+    font-size: 140%;
+    color: rgb(141, 68, 194);
+}

@@ -7,8 +7,8 @@ const app = express()
 
 //for view 
 //pages that are kept under dynamic
-app.set('view engine','hbs')
-app.set('views',path.join(__dirname,'../views/views'))
+// app.set('view engine','hbs')
+// app.set('views',path.join(__dirname,'../views/views'))
 
 //for partials
 hbs.registerPartials(path.join(__dirname,'../views/partials'))
@@ -22,9 +22,7 @@ app.get("/", (req, res) => {
     res.render('index')
 })
 
-app.get("/news", (req, res) => {
-     res.render('news')
- })
+
 
 app.get('*', (req,res) => {
     res.send("<h1>404 page Not Found</h1>")

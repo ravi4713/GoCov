@@ -6,7 +6,7 @@ const url = 'https://newsapi.org/v2/top-headlines?country=in&apiKey='+api+'&cate
 
 
 
-fetch(url).then((response)=>{
+fetch('./json.json').then((response)=>{
   response.json().then((data)=>{
     console.log(data)
      const articles = data.articles
