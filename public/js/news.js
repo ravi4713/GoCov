@@ -1,6 +1,6 @@
 
 const api ='9cbbba7d25834dad9ec9c3b48e6d4337'
-//from mewsapi
+//from newsapi
 
 const url = 'https://newsapi.org/v2/top-headlines?country=in&apiKey='+api+'&category=health&q=health'
 
@@ -23,7 +23,8 @@ fetch(url).then((response)=>{
         
     </div>
     <div class="more" id='more-${index}'>
-       <span class='by'>${source}</span><br>${description}<a href="${url}">read more at</a>
+       <span class='by'>${source} : </span>${description}
+       <p><a href="${url}">Read More</a></p>
    </div> `
 
   })
