@@ -1,0 +1,12 @@
+label{
+    color: rgb(104, 91, 218);
+    font-weight: bold;
+    font-size: 230%;
+}
+input{
+    border: 4px solid rgb(223, 18, 18);
+    font-weight: bold;
+    font-size: 230%;
+    color: rgb(209, 85, 85);
+    width: 50%;
+}
