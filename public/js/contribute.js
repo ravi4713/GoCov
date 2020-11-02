@@ -37,8 +37,19 @@ function showTable() {
     i=0
   }
 }
+var j=0
+function showngo() {
+  if(j==0){
+    document.getElementById('conform').style.display='none';
+    j=1
+  }
+  else{
+    document.getElementById('conform').style.display='block'
+    j=0
+  }
+}
 function fetchData(){
-fetch('http://localhost:8080/contribute').then((response)=>{
+fetch('http://localhost:8080/ngo').then((response)=>{
   response.json().then((data)=>{
     let html=``
     data.forEach(element => {
@@ -47,7 +58,8 @@ fetch('http://localhost:8080/contribute').then((response)=>{
       <td>${element.email}</td>
       <td>${element.place}</td>
       <td>${element.state}</td>
-      <td>${element.contri}</td>
+      <td>${element.des}</td>
+      <td>${element.url}</td>
   </tr>`
       
     });

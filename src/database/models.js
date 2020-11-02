@@ -1,12 +1,12 @@
 const mongoose =require('mongoose')
 
-mongoose.connect('mongodb://127.0.0.1:27017/contribute',{
+mongoose.connect('mongodb://127.0.0.1:27017/ngo',{
     useNewUrlParser:true,
     useCreateIndex:true
 }
 )
 
-const contribute = mongoose.model('contributor',{
+const ngo = mongoose.model('ngo',{
     name: {
         type:String,
         trim:true
@@ -27,10 +27,18 @@ const contribute = mongoose.model('contributor',{
         type:String,
         trim:true
     },
-    contri:{
+    des:{
         type:String,
         trim:true
     },
+    url:{
+        type:String,
+        trim:true
+    },
+    verified:{
+        type:Boolean,
+        default:false
+    }
 })
 
-module.exports = contribute
+module.exports = ngo

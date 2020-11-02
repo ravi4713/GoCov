@@ -16,7 +16,7 @@
             </nav>
         </header>
         <div class="cmain">
-            <div class="headt">Contribute</div>
+            <div class="headt">NGOs</div>
             <div class="emotionaltext">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Dolorem minima odio aperiam architecto expedita quia tenetur ducimus vel doloribus enim! Facilis laudantium quas fugit nulla. Quas inventore ad adipisci blanditiis!</div>
             <div class="slideshow-container">
 
@@ -40,14 +40,14 @@
               <br>
               
         <div class='dmain'>
-            <div class="contribute">
-                <button>Contribute</button>
+            <div class="contribute" onclick="showngo()">
+                <button>Add Ngos</button>
             </div>
             <div class="contributor" onclick="showTable()">
-                <button>Contributor</button>
+                <button>Ngos</button>
             </div>
-            <div class="conform">
-                <form   method="POST" action="\contribute">
+            <div class="conform" id='conform' style="display: none;">
+                <form   method="POST" action="\ngo">
                     <label for="name">Name: </label>
                     <br>
                     <input type="text" name="name" id="name">
@@ -73,9 +73,14 @@
                     <input type="text" name="state" id="state">
                     <br>
                     <br>
-                    <label for="con">Contribute:</label>
+                    <label for="des">Description:</label>
                     <br>
-                    <input type="number" name="con" id="con">
+                    <input type="text" name="des" id="des">
+                    <br>
+                    <br>
+                    <label for="url">Url:</label>
+                    <br>
+                    <input type="text" name="url" id="url">
                     <br>
                     <br>
                     
@@ -95,7 +100,8 @@
                             <td>email</td>
                             <td>Place</td>
                             <td>State</td>
-                            <td>Contribution</td>
+                            <td>Description</td>
+                            <td>url</td>
                         </tr>
                     </thead>
                     <tbody id='tablebody'>
