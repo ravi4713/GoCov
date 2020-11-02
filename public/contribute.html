@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="/css/style1.css">
     <link rel="stylesheet" href="/css/contribute.css">
 </head>
-<body>
+<body onload="fetchData()">
     <div class="container">
         <header>
             <nav>
@@ -47,7 +47,7 @@
                 <button>Contributor</button>
             </div>
             <div class="conform">
-                <form   method="POST">
+                <form   method="POST" action="\contribute">
                     <label for="name">Name: </label>
                     <br>
                     <input type="text" name="name" id="name">
@@ -98,16 +98,9 @@
                             <td>Contribution</td>
                         </tr>
                     </thead>
-                    <tbody>
-                        {{#each data}}
-                        <tr>
-                            <td>{{this.name}}</td>
-                            <td>{{this.email}}</td>
-                            <td>{{this.place}}</td>
-                            <td>{{this.state}}</td>
-                            <td>{{this.contri}}</td>
-                        </tr>
-                        {{/each}}
+                    <tbody id='tablebody'>
+                        
+
                     </tbody>
                 </table>
                 

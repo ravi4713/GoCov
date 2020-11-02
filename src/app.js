@@ -9,10 +9,7 @@ app.use(express.json())
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(bodyParser.json());
 
-//for view 
-//pages that are kept under dynamic
-app.set('view engine','hbs')
-app.set('views',path.join(__dirname,'../views/views'))
+
 
 //for partials
 hbs.registerPartials(path.join(__dirname,'../views/partials'))
@@ -25,8 +22,7 @@ app.use(express.static(path.join(__dirname,"../public")))
 app.get("/contribute", (req, res) => {
     
     contribute.find({}).then((data)=>{
-        list = {"data":data}
-        res.render("contribute",list)
+        res.send(data)
     }).catch((e)=>{
         res.send(e)
     })
@@ -36,7 +32,7 @@ app.post("/contribute",(req,res)=>{
     datasend = {
         "name":req.body.name,
         "email":req.body.email,
-        "number":req.body.number,
+        "number":req.body.num,
         "place":req.body.place,
         "state":req.body.state,
         "contri":req.body.con,
@@ -45,7 +41,7 @@ app.post("/contribute",(req,res)=>{
     console.log(datasend)
     const contribut = new contribute(datasend)
     contribut.save().then(()=>{
-        res.redirect('/contribute')
+        res.redirect('/contribute.html')
     }).catch((e)=>{
         res.status(400).send(e)
     })

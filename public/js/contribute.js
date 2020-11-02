@@ -37,3 +37,21 @@ function showTable() {
     i=0
   }
 }
+function fetchData(){
+fetch('http://localhost:8080/contribute').then((response)=>{
+  response.json().then((data)=>{
+    let html=``
+    data.forEach(element => {
+      html+=`<tr>
+      <td>${element.name}</td>
+      <td>${element.email}</td>
+      <td>${element.place}</td>
+      <td>${element.state}</td>
+      <td>${element.contri}</td>
+  </tr>`
+      
+    });
+    document.getElementById('tablebody').innerHTML=html
+  
+})})
+}
