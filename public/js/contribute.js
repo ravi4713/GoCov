@@ -59,7 +59,7 @@ fetch('http://localhost:8080/ngo').then((response)=>{
       <td>${element.place}</td>
       <td>${element.state}</td>
       <td>${element.des}</td>
-      <td>${element.url}</td>
+      <td><a href='${element.url}'>Click Me</a></td>
   </tr>`
       
     });
