@@ -1,5 +1,5 @@
-var slideIndex = 1;
-showSlides(slideIndex);
+// var slideIndex = 1;
+// showSlides(slideIndex);
 
 // Next/previous controls
 function plusSlides(n) {
@@ -27,16 +27,16 @@ function showSlides(n) {
   dots[slideIndex-1].className += " active";
 }
 var i=0
-function showTable() {
-  if(i==0){
-    document.getElementById('table').style.display='none';
-    i=1
-  }
-  else{
-    document.getElementById('table').style.display='block'
-    i=0
-  }
-}
+// function showTable() {
+//   if(i==0){
+//     document.getElementById('table').style.display='none';
+//     i=1
+//   }
+//   else{
+//     document.getElementById('table').style.display='block'
+//     i=0
+//   }
+// }
 var j=0
 function showngo() {
   if(j==0){
@@ -53,14 +53,19 @@ fetch('http://localhost:8080/ngo').then((response)=>{
   response.json().then((data)=>{
     let html=``
     data.forEach(element => {
-      html+=`<tr>
-      <td>${element.name}</td>
-      <td>${element.email}</td>
-      <td>${element.place}</td>
-      <td>${element.state}</td>
-      <td>${element.des}</td>
-      <td>${element.url}</td>
-  </tr>`
+      html+=`
+      <div class="nc">
+                    <h1>${element.name}</h1>
+                    <h2>${element.place}, ${element.state}</h2>
+                    <br>
+                    <a href="${element.url}">${element.url}</a><br>
+                    <a href="mailto:${element.email}">${element.email}</a>
+                    <br>
+                    <br>
+                    <h5>
+                    ${element.des}
+                    </h5>
+      </div>`
       
     });
     document.getElementById('tablebody').innerHTML=html

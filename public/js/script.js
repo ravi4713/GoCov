@@ -13,8 +13,6 @@ let app = angular.module("MyApp",[]);
 
 // });
 app.controller('MyCtrl',($scope , $http)=>{
-    // this is controller
-    // $scope.title="Stay home stay safe";
     $scope.countries = [];
 $http.get(URL1).then((response)=>{
     console.log(response);

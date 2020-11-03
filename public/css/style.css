@@ -37,6 +37,18 @@ button{
     outline:none;
 
 }
+.but{
+    width:170px;
+    height:45px;
+    border-radius: 10px;
+    background-color: #5ac9e2;
+    border-style: solid;
+    border-color: #5ac9e2;
+    color: #00235a;
+    font-weight:800;
+    cursor: pointer;
+    outline:none;
+}
 a{
     text-decoration: none;
     text-decoration-color: #00235a;

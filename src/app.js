@@ -35,6 +35,15 @@ app.patch("/admin/:id", (req,res) => {
     
 
 })
+app.delete("/admin/remove/:id", (req,res) => {
+    ngo.findByIdAndDelete(req.params.id).then((data)=>{
+        res.send(data)
+    }).catch((e)=>{
+        res.send(e)
+    })
+    
+
+})
 app.get("/ngo", (req, res) => {
     
     ngo.find({verified:true}).then((data)=>{

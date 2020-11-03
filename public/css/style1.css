@@ -1,12 +1,61 @@
 label{
-    color: rgb(104, 91, 218);
-    font-weight: bold;
-    font-size: 230%;
+    color: #5ac9e2;
+    /* font-weight: bold; */
+    font-size: 30px;
 }
 input{
-    border: 4px solid rgb(223, 18, 18);
+    border: 4px solid #003da0;
+    border-radius: 20px;
+    padding:20px 40px;
     font-weight: bold;
-    font-size: 230%;
-    color: rgb(209, 85, 85);
-    width: 50%;
+    font-size: 20px;
+    color: #5ac9e2;
+    background-color: transparent;
+    width: 100%;
+    outline: none;
 }
+.but{
+    width:170px;
+    height:45px;
+    border-radius: 10px;
+    background-color: #5ac9e2;
+    border-style: solid;
+    border-color: #5ac9e2;
+    color: #00235a;
+    font-weight:800;
+    cursor: pointer;
+    outline:none;
+    padding: 5px;
+}   
+.hope{
+    /* border-color: yellow;
+    border-style: solid; */
+    width:50%;
+    margin:10px auto 0px;
+}
+/* .data{
+    border-color: white;
+    border-style: solid;
+} */
+.nc{
+    /* border-color: red;
+    border-style: solid; */
+    padding: 20px 50px;
+    color: white;
+    height: 300px;
+    width: 65%;
+    background-color: #003da0;
+    margin: 25px auto 0px;
+    border-radius: 20px;
+}
+.nc > a{
+    color: white;
+    text-decoration: none;
+}
+.hue{
+    width:65%;
+    color:white;
+    margin:20px auto 80px;
+    /* justify-content: space-between; */
+}
+
